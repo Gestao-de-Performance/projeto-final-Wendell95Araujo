@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Wendell Araújo">
+    <meta name="author" content="Wendell Araújo">
+    <meta name="keywords" content="HTML, CSS, JavaScript, TypeScript, C#">
+    <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon">
+    <title>Wendell Araújo Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="lib/fontawesome-pro-6.5.2-web/css/all.min.css">
+</head>
+<body>
+    <header id="header" class="panel">
+        <img class="logoPrincipal" src="img/logo.jpg" alt="Logo Wendell Araújo" height="48px">
+        <nav class="menu">
+            <a href="#about">Sobre Mim</a>
+            <a href="#projects">Projetos</a>
+            <a href="#skills">Habilidades</a>
+            <a href="#contact">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="panel about">
+            <h2>Sobre Mim</h2>
+            <div class="about-content">
+                <div class="profile-photo-container">
+                    <img width="100px" src="img/wendell.webp" alt="Minha foto" class="profile-photo">
+                </div>
+                <p>Desenvolvedor Full Stack apaixonado por criar soluções inovadoras e funcionais.</p>
+            </div>
+        </section>
+
+        <section id="projects" class="panel projects">
+            <div>
+                <h2>Projetos</h2>
+                <p>Exemplo de projeto com detalhes sobre tecnologias e objetivos alcançados.</p>
+            </div>
+            <div class="projects-button-container">
+                <button class="project-button" onclick="openModal('laisa', false)">Studio Laisa Novais Hair Concept</button>
+                <button class="project-button" onclick="openModal('barbearia')">Barbearia Alura</button>
+                <button class="project-button" onclick="openModal('beatriz')">Beatriz Store</button>
+                <button class="project-button" onclick="openModal('dino')">Game - Dino Game</button>
+                <button class="project-button" onclick="openModal('velha')">Game - Jogo da Velha</button>
+                <button class="project-button" onclick="openModal('aluraMidi')">Alura Midi</button>
+            </div>
+        </section>
+
+        <div id="projectModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img id="modalImage" src="" alt="Imagem do Projeto">
+                <h2 id="modalTitle">Título do Projeto</h2>
+                <p id="modalDescription">Descrição do Projeto</p>
+                <div class="modal-buttons">
+                    <a id="githubLink" class="button" href="#" target="_blank">Ver no GitHub</a>
+                    <a id="onlineLink" class="button" href="#" target="_blank">Acessar Online</a>
+                </div>
+            </div>
+        </div>
+
+        <section id="skills" class="panel skills">
+            <h2>Habilidades</h2>
+            <p>Domínio em HTML, CSS, JavaScript, TypeScript, C# e outras tecnologias.</p>
+        </section>
+    </main>
+    <footer>
+        <div class="containerLogoFooter">
+            <img class="logoFooter" src="img/logo.jpg" alt="Logo principal do site">
+            <p>Wendell Araújo Developer</p>
+        </div>
+        <div class="contact">
+            <div class="contact-info">
+                <h2>Contato</h2>
+                <p>Email: <a class="email-link" href="mailto:wendell170695@gmail.com">wendell170695@gmail.com</a></p>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/Wendell95Araujo" target="_blank" class="social-icon"><i class="fab fa-github"></i>GitHub</a>
+                <a href="https://www.linkedin.com/in/wendell-araujo" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i>LinkedIn</a>
+            </div>
+        </div>
+      </footer>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
