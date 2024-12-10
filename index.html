@@ -19,7 +19,6 @@
             <a href="#about">Sobre Mim</a>
             <a href="#projects">Projetos</a>
             <a href="#skills">Habilidades</a>
-            <a href="#contact">Contato</a>
         </nav>
     </header>
 
@@ -37,15 +36,16 @@
         <section id="projects" class="panel projects">
             <div>
                 <h2>Projetos</h2>
-                <p>Exemplo de projeto com detalhes sobre tecnologias e objetivos alcançados.</p>
+                <p>Meus projetos</p>
             </div>
             <div class="projects-button-container">
                 <button class="project-button" onclick="openModal('laisa', false)">Studio Laisa Novais Hair Concept</button>
                 <button class="project-button" onclick="openModal('barbearia')">Barbearia Alura</button>
                 <button class="project-button" onclick="openModal('beatriz')">Beatriz Store</button>
-                <button class="project-button" onclick="openModal('dino')">Game - Dino Game</button>
-                <button class="project-button" onclick="openModal('velha')">Game - Jogo da Velha</button>
                 <button class="project-button" onclick="openModal('aluraMidi')">Alura Midi</button>
+                <button class="project-button" onclick="openModal('dino')">Game - Dino Dancer</button>
+                <button class="project-button" onclick="openModal('velha')">Game - Jogo da Velha</button>
+                <button class="project-button" onclick="openModal('forca')">Game - Jogo da Forca</button>
             </div>
         </section>
 
@@ -53,8 +53,8 @@
             <div class="modal-content">
                 <span class="close" onclick="closeModal()">&times;</span>
                 <img id="modalImage" src="" alt="Imagem do Projeto">
-                <h2 id="modalTitle">Título do Projeto</h2>
-                <p id="modalDescription">Descrição do Projeto</p>
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
                 <div class="modal-buttons">
                     <a id="githubLink" class="button" href="#" target="_blank">Ver no GitHub</a>
                     <a id="onlineLink" class="button" href="#" target="_blank">Acessar Online</a>

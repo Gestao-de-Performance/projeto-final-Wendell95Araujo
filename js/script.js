@@ -16,7 +16,7 @@ function openModal(project, gitHubLink = true) {
     laisa: {
       title: "Studio Laisa Novais Hair Concept",
       description: "Site com informações de contato, promoções e serviços",
-      image: "img/projects/laisa.gif",
+      image: "img/projects/laisa.webp",
       github: "#",
       online: "https://laisa-novais-hair-concept.web.app/",
     },
@@ -24,37 +24,45 @@ function openModal(project, gitHubLink = true) {
       title: "BARBEARIA ALURA",
       description:
         "Site com informações sobre o estabelecimento e formulário de contato",
-      image: "img/projects/barbearia.gif",
+      image: "img/projects/barbearia.webp",
       github: "https://github.com/wendell95araujo/barbeariaalura.io",
       online: "https://wendell95araujo.github.io/barbeariaalura.io/",
     },
     beatriz: {
       title: "BEATRIZ STORE",
       description: "Loja virtual de roupas femininas",
-      image: "img/projects/beatriz.gif",
+      image: "img/projects/beatriz.webp",
       github: "https://github.com/wendell95araujo/beatriz-store",
       online: "https://wendell95araujo.github.io/beatriz-store/",
     },
     dino: {
       title: "GAME - DINO DANCER",
       description: "Jogo de plataforma (jump 'n' run)",
-      image: "img/projects/dino.gif",
+      image: "img/projects/dino.webp",
       github: "https://github.com/wendell95araujo/dinogame.io",
-      online: "https://wendell95araujo.github.io/dinogame.io/",
+      online: "games/dino-dancer-game",
     },
     velha: {
       title: "GAME - JOGO DA VELHA",
       description: "Jogo da velha para dois jogadores",
-      image: "img/projects/velha.gif",
+      image: "img/projects/velha.webp",
       github: "https://github.com/wendell95araujo/jogodavelha.io",
       online: "https://wendell95araujo.github.io/jogodavelha.io/",
     },
     aluraMidi: {
       title: "ALURA MIDI",
       description: "Teclado musical de percussão",
-      image: "img/projects/aluraMidi.gif",
+      image: "img/projects/aluraMidi.webp",
       github: "https://github.com/wendell95araujo/aluramidi",
       online: "https://wendell95araujo.github.io/aluramidi/",
+    },
+
+    forca: {
+      title: "GAME - JOGO DA FORCA",
+      description: "Jogo da forca",
+      image: "img/projects/forca.webp",
+      github: "https://github.com/Wendell95Araujo/jogo-da-forca",
+      online: "games/jogo-da-forca",
     },
   };
 
