@@ -150,9 +150,9 @@ main {
 }
 
 .profile-photo-container {
-  width: 100px;
-  height: 100px;
-  min-width: 100px;
+  width: 200px;
+  height: 200px;
+  min-width: 200px;
   border-radius: 50%;
   border: 2px solid var(--tertiary-color);
   overflow: hidden;
@@ -467,6 +467,12 @@ footer {
 }
 
 @media screen and (max-width: 576px) {
+  .profile-photo-container{
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+  }
+
   #contact {
     flex-direction: column;
   }
