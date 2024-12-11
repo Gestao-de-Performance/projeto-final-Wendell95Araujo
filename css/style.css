@@ -146,6 +146,7 @@ main {
   display: flex;
   flex-direction: row;
   gap: 20px;
+  align-items: center;
 }
 
 .profile-photo-container {
