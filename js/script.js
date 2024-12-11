@@ -64,6 +64,14 @@ function openModal(project, gitHubLink = true) {
       github: "https://github.com/Wendell95Araujo/jogo-da-forca",
       online: "games/jogo-da-forca",
     },
+
+    faculdade: {
+      title: "FACULDADE UNÍNTESE",
+      description: "Site de apresentação da faculdade",
+      image: "img/projects/faculdade.webp",
+      github: "https://github.com/Wendell95Araujo/faculdade-digital",
+      online: "https://wendell95araujo.github.io/faculdade-digital/",
+    }
   };
 
   const data = projects[project];

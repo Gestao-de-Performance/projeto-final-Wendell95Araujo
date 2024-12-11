@@ -22,9 +22,7 @@ html {
   color: var(--tertiary-color);
   background: url("../img/background.webp") no-repeat center center fixed;
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
-  min-height: 100vh;
 }
 
 /* Estilo para o cabeçalho */
@@ -46,12 +44,10 @@ html {
 
 #header h1 {
   font-size: 1rem;
-  color: var(--tertiary-color);
 }
 
 #header nav a {
   margin: 0 15px;
-  color: var(--tertiary-color);
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s ease;
@@ -101,13 +97,12 @@ main {
   gap: 20px;
   width: 100%;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.8);
   overflow-y: auto;
   flex: 1;
 }
 
 .panel {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(19, 22, 29, 0.8);
   padding: 20px;
   border-radius: 10px;
   position: relative;
@@ -116,24 +111,16 @@ main {
 
 .panel:not(#header):hover {
   transform: translateY(-5px);
-}
-
-.projects {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .panel h2 {
   font-size: 1.8rem;
-  color: var(--tertiary-color);
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .panel p {
-  font-size: 1rem;
-  color: var(--tertiary-color);
+  font-size: 1.2rem;
   line-height: 1.5;
 }
 
@@ -150,13 +137,21 @@ main {
 /* Estilos adicionais para a seção Sobre Mim */
 .about-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 20px;
+}
+
+.apresentacao-container {
+  display: flex;
+  flex-direction: row;
   gap: 20px;
 }
 
 .profile-photo-container {
   width: 100px;
   height: 100px;
+  min-width: 100px;
   border-radius: 50%;
   border: 2px solid var(--tertiary-color);
   overflow: hidden;
@@ -166,10 +161,21 @@ main {
   width: 100%;
 }
 
-.about-content p {
-  flex: 1;
-  font-size: 1rem;
-  color: var(--tertiary-color);
+.about-text-container ul {
+  padding-left: 40px;
+}
+
+.about-text-container li {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.about-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
 }
 
 /* Estilos adicionais para a seção habilidades e Contato */
@@ -204,6 +210,13 @@ main {
 }
 
 /* Estilo dos botões de projetos */
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
 .projects-button-container {
   display: flex;
   flex-wrap: wrap;
@@ -213,19 +226,23 @@ main {
 
 .project-button {
   padding: 10px 20px;
-  width: 30%;
+  width: 45%;
   height: 60px;
   background-color: var(--primary-color);
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 1.2rem;
   font-weight: bold;
   line-height: 1.5;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .project-button:hover {
   opacity: 0.8;
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
 }
 
 /* Estilo do modal */
@@ -392,8 +409,13 @@ footer {
 
 /* Layout para diferentes tamanhos de tela */
 @media screen and (max-width: 900px) {
-  .project-button {
-    width: 45%;
+  .profile-photo-container {
+    float: left;
+    margin-right: 20px;
+  }
+
+  .apresentacao-container {
+    display: block;
   }
 
   .separator {
@@ -402,6 +424,10 @@ footer {
 
   #contact {
     justify-content: space-between;
+  }
+
+  .project-button {
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -418,6 +444,7 @@ footer {
 
   .project-button {
     width: 80%;
+    font-size: 1rem;
   }
 
   .logoFooter {
