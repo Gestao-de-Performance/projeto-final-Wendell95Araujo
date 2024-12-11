@@ -7,7 +7,7 @@
     <meta name="author" content="Wendell Araújo">
     <meta name="keywords" content="HTML, CSS, JavaScript, TypeScript, C#">
     <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon">
-    <title>Wendell Araújo Developer</title>
+    <title>WMA Developer</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="lib/fontawesome-pro-6.5.2-web/css/all.min.css">
@@ -15,10 +15,12 @@
 <body>
     <header id="header" class="panel">
         <img class="logoPrincipal" src="img/logo.jpg" alt="Logo Wendell Araújo" height="48px">
-        <nav class="menu">
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <nav class="menu" id="menu">
             <a href="#about">Sobre Mim</a>
-            <a href="#projects">Projetos</a>
+            <a href="#contact">Contato</a>
             <a href="#skills">Habilidades</a>
+            <a href="#projects">Projetos</a>
         </nav>
     </header>
 
@@ -33,19 +35,39 @@
             </div>
         </section>
 
+        <div class="separator">
+            <section id="skills" class="panel skills">
+                <h2>Habilidades</h2>
+                <p>Domínio em HTML, CSS, JavaScript, TypeScript, C# e outras tecnologias.</p>
+            </section>
+    
+            <section id="contact" class="panel contact">
+                <div class="contact-title">
+                    <h2>Contato</h2>
+                    <p>Email: <a class="email-link" href="mailto:wendell170695@gmail.com">wendell170695@gmail.com</a></p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Wendell95Araujo" target="_blank" class="social-icon github"><i class="fab fa-github"></i>GitHub</a>
+                    <a href="https://www.linkedin.com/in/wendell-araujo" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin"></i>LinkedIn</a>
+                </div>
+                </div>
+            </section>
+        </div>
+
+
         <section id="projects" class="panel projects">
             <div>
                 <h2>Projetos</h2>
                 <p>Meus projetos</p>
             </div>
             <div class="projects-button-container">
-                <button class="project-button" onclick="openModal('laisa', false)">Studio Laisa Novais Hair Concept</button>
                 <button class="project-button" onclick="openModal('barbearia')">Barbearia Alura</button>
                 <button class="project-button" onclick="openModal('beatriz')">Beatriz Store</button>
+                <button class="project-button" onclick="openModal('laisa', false)">Studio Laisa Novais Hair Concept</button>
                 <button class="project-button" onclick="openModal('aluraMidi')">Alura Midi</button>
                 <button class="project-button" onclick="openModal('dino')">Game - Dino Dancer</button>
-                <button class="project-button" onclick="openModal('velha')">Game - Jogo da Velha</button>
                 <button class="project-button" onclick="openModal('forca')">Game - Jogo da Forca</button>
+                <button class="project-button" onclick="openModal('velha')">Game - Jogo da Velha</button>
             </div>
         </section>
 
@@ -61,25 +83,20 @@
                 </div>
             </div>
         </div>
-
-        <section id="skills" class="panel skills">
-            <h2>Habilidades</h2>
-            <p>Domínio em HTML, CSS, JavaScript, TypeScript, C# e outras tecnologias.</p>
-        </section>
     </main>
     <footer>
         <div class="containerLogoFooter">
             <img class="logoFooter" src="img/logo.jpg" alt="Logo principal do site">
-            <p>Wendell Araújo Developer</p>
+            <p>WMA Developer</p>
         </div>
-        <div class="contact">
+        <div class="contact-footer">
             <div class="contact-info">
                 <h2>Contato</h2>
                 <p>Email: <a class="email-link" href="mailto:wendell170695@gmail.com">wendell170695@gmail.com</a></p>
             </div>
             <div class="social-links">
-                <a href="https://github.com/Wendell95Araujo" target="_blank" class="social-icon"><i class="fab fa-github"></i>GitHub</a>
-                <a href="https://www.linkedin.com/in/wendell-araujo" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i>LinkedIn</a>
+                <a href="https://github.com/Wendell95Araujo" target="_blank" class="social-icon github"><i class="fab fa-github"></i>GitHub</a>
+                <a href="https://www.linkedin.com/in/wendell-araujo" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin"></i>LinkedIn</a>
             </div>
         </div>
       </footer>

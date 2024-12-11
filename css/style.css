@@ -13,7 +13,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body,
@@ -24,6 +24,7 @@ html {
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
+  min-height: 100vh;
 }
 
 /* Estilo para o cabeçalho */
@@ -33,7 +34,6 @@ html {
   left: 0;
   width: 100%;
   text-align: center;
-  padding-bottom: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -66,12 +66,24 @@ html {
   height: 48px;
 }
 
-.menu {
-  display: flex;
-  justify-content: space-between;
+#menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 2;
 }
 
-.menu a {
+#menu-icon:hover {
+  color: var(--secondary-color);
+}
+
+#menu {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+}
+
+#menu a {
   font-size: 20px;
 }
 
@@ -160,6 +172,37 @@ main {
   color: var(--tertiary-color);
 }
 
+/* Estilos adicionais para a seção habilidades e Contato */
+.separator {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+#skills {
+  flex: 1;
+}
+
+#contact {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#contact .social-links {
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+#contact .social-icon {
+  width: auto;
+}
+
 /* Estilo dos botões de projetos */
 .projects-button-container {
   display: flex;
@@ -171,13 +214,14 @@ main {
 .project-button {
   padding: 10px 20px;
   width: 30%;
-  height: 50px;
+  height: 60px;
   background-color: var(--primary-color);
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  line-height: 1.5;
 }
 
 .project-button:hover {
@@ -248,6 +292,7 @@ main {
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
+  transition: all 0.3s ease-in-out;
 }
 .button:hover {
   opacity: 0.8;
@@ -278,7 +323,7 @@ footer {
   height: 80px;
 }
 
-.contact {
+.contact-footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -309,15 +354,18 @@ footer {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
-  font-size: 1rem;
+  font-size: 14px;
+  width: 100%;
 }
 
 .social-links a {
   max-width: 45%;
+  display: flex;
+  align-items: flex-end;
 }
 
 .social-icon {
-  font-size: 1rem;
+  font-size: 14px;
   transition: color 0.3s ease;
   display: flex;
   align-items: center;
@@ -347,6 +395,14 @@ footer {
   .project-button {
     width: 45%;
   }
+
+  .separator {
+    flex-direction: column-reverse;
+  }
+
+  #contact {
+    justify-content: space-between;
+  }
 }
 @media screen and (max-width: 768px) {
   body,
@@ -368,7 +424,7 @@ footer {
     height: 60px;
   }
 
-  .contact {
+  .contact-footer {
     gap: 10px;
   }
 
@@ -382,24 +438,81 @@ footer {
   }
 }
 
+@media screen and (max-width: 576px) {
+  #contact {
+    flex-direction: column;
+  }
+
+  .social-icon.linkedin {
+    justify-content: flex-end;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  #menu {
+    position: fixed;
+    top: 0;
+    padding: 80px 10px 10px;
+    right: -150px;
+    width: 150px;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 4px !important;
+  }
+
+  #menu.active {
+    right: 0;
+  }
+
+  #menu a {
+    padding: 10px;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    margin: 0 !important;
+  }
+
+  #menu a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color) !important;
+    text-decoration: none !important;
+  }
+}
+
 @media screen and (max-width: 480px) {
   footer {
     padding: 20px;
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+
+  footer p {
+    width: 100%;
   }
 
   .containerLogoFooter {
     justify-content: space-between;
+    max-width: 100%;
+    gap: 10px;
   }
 
-  .logoFooter {
-    height: 48px;
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .social-links {
+    justify-content: center;
+    gap: 20px;
   }
 
   .social-icon {
-    font-size: 0.8rem;
-  }
-
-  .social-icon i {
-    font-size: 1.5rem;
+    width: auto;
   }
 }

@@ -81,3 +81,21 @@ function openModal(project, gitHubLink = true) {
 function closeModal() {
   document.getElementById("projectModal").style.display = "none";
 }
+
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("active");
+}
+
+const menuIcon = document.getElementById("menu-icon");
+const menuButtons = document.querySelectorAll(".menu a");
+
+menuIcon.addEventListener("click", () => {
+  toggleMenu();
+});
+
+menuButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    toggleMenu();
+  });
+});
