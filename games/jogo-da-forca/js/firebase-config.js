@@ -1,1 +1,16 @@
-function _0x2deb(e,$){let x=_0x3043();return(_0x2deb=function(e,$){return x[e-=483]})(e,$)}function _0x3043(){let e=["1:635259446092:web:2b86b6a80f111f1064e5e9","23195970cIuogq","40vBGwjx","1027901wXmOxh","3mtUSYa","12128193afiyGG","jogo-da-forca-1faed","90578xQgbmo","730458nMbHoy","140bkkLLf","jogo-da-forca-1faed.firebasestorage.app","initializeApp","5322128joHFwm","165736OFvBKZ","jogo-da-forca-1faed.firebaseapp.com"];return(_0x3043=function(){return e})()}(function(e,$){let x=_0x2deb,a=e();for(;;)try{let _=-parseInt(x(489))/1+parseInt(x(493))/2*(parseInt(x(490))/3)+parseInt(x(483))/4+parseInt(x(488))/5*(parseInt(x(494))/6)+parseInt(x(495))/7*(parseInt(x(484))/8)+parseInt(x(491))/9+-parseInt(x(487))/10;if(764184===_)break;a.push(a.shift())}catch(t){a.push(a.shift())}})(_0x3043,764184),function(){let e=_0x2deb,$={apiKey:"AIzaSyBc7bsTNRmThM989rENIf9jYxLtOCPWRBk",authDomain:e(485),databaseURL:"https://jogo-da-forca-1faed-default-rtdb.firebaseio.com",projectId:e(492),storageBucket:e(496),messagingSenderId:"635259446092",appId:e(486)};firebase[e(497)]($)}();
+(function () {
+  const firebaseConfig = {
+    apiKey: "SUA_API_KEY",
+    authDomain: "SEU_AUTH_DOMAIN",
+    databaseURL: "SUA_DATABASE_URL",
+    projectId: "SEU_PROJECT_ID",
+    storageBucket: "SEU_STORAGE_BUCKET",
+    messagingSenderId: "SEU_SENDER_ID",
+    appId: "SEU_APP_ID"
+};
+
+  firebase.initializeApp(firebaseConfig);
+})();
+
+const db = firebase.database();
+const auth = firebase.auth();
