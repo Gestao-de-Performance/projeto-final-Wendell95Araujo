@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jogo da Forca">
+    <meta name="authior" content="Wendell Araujo">
+    <title>Jogo da Forca</title>
+    <link rel="shortcut icon" href="../../games/jogo-da-forca/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../games/jogo-da-forca/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Bubbles&family=Special+Elite&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/480d2553e7.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script type="text/javascript" src="../../games/jogo-da-forca/js/firebase-config.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        
+        <h1>Jogo da Forca</h1>
+
+        <div class="container-buttons">
+            <button id="iniciarJogo">
+                <i class="fa-solid fa-play"></i>
+                <span>Iniciar Jogo</span>
+            </button>
+            <button id="reiniciarJogo">
+                <i class="fa-solid fa-rotate-right"></i>
+                <span>Reiniciar Jogo</span>
+            </button>
+            <button id="configuracoes">
+                <i class="fa-solid fa-cog"></i>
+                <span>Configurações</span>
+            </button>
+        </div>
+
+        <div id="Pontuações">
+            <p id="pontuacao"></p>
+            <p id="record"></p>
+        </div>
+
+        <div id="forca">
+            <div class="base"></div>
+            <div class="poste"></div>
+            <div class="barra"></div>
+            <div class="haste"></div>
+            <div class="corda"></div>
+            <div class="cabeca"></div>
+            <div class="corpo"></div>
+            <div class="braco-esq"></div>
+            <div class="braco-dir"></div>
+            <div class="perna-esq"></div>
+            <div class="perna-dir"></div>
+        </div>
+
+        <div id="jogo">
+            <div id="dica"></div>
+            <div id="palavra"></div>
+            <div id="teclado"></div>
+        </div>
+    </div>
+    <footer>
+        <a href="../../index.html" title="WMA Developer"><img src="../../img/logo-transparent.webp" alt="Logo WMA Developer" height="50px"></a>
+        <p>Desenvolvido por WMA Developer</p>
+    </footer>
+    <script src="../../games/jogo-da-forca/js/script.js"></script>
+</body>
+</html>

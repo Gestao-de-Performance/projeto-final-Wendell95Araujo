@@ -1,0 +1,547 @@
+:root {
+  --primary-color: #13161d;
+  --secondary-color: #4db8ff;
+  --tertiary-color: #e0e0e0;
+  scroll-padding-top: 100px;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  font-family: "Montserrat", sans-serif;
+  color: var(--tertiary-color);
+  background: url("../img/background.webp") no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+}
+
+/* Estilo para o cabeçalho */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 0;
+  background: var(--primary-color);
+  border: none;
+  z-index: 1;
+}
+
+#header h1 {
+  font-size: 1rem;
+}
+
+#header nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+#header nav a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+.logoPrincipal {
+  height: 48px;
+}
+
+#menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+#menu-icon:hover {
+  color: var(--secondary-color);
+}
+
+#menu {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+}
+
+#menu a {
+  font-size: 20px;
+}
+
+/* Estilo para o corpo */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.panel {
+  background: rgba(19, 22, 29, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.panel:not(#header):hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.panel h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.panel p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.panel a {
+  color: var(--tertiary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.panel a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos adicionais para a seção Sobre Mim */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.apresentacao-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.profile-photo-container {
+  width: 200px;
+  height: 200px;
+  min-width: 200px;
+  border-radius: 50%;
+  border: 2px solid var(--tertiary-color);
+  overflow: hidden;
+}
+
+.profile-photo {
+  width: 100%;
+}
+
+.about-text-container ul {
+  padding-left: 40px;
+}
+
+.about-text-container li {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.about-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Estilos adicionais para a seção habilidades e Contato */
+.separator {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+#skills {
+  flex: 1;
+}
+
+#contact {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#contact .social-links {
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+#contact .social-icon {
+  width: auto;
+}
+
+/* Estilo dos botões de projetos */
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.projects-button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.project-button {
+  padding: 10px 20px;
+  width: 45%;
+  height: 60px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.5;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.project-button:hover {
+  opacity: 0.8;
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+}
+
+/* Estilo do modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  margin: 25px auto 15px;
+  border-radius: 10px;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.close {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  font-size: 50px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 2px;
+  width: 40px;
+  height: 40px;
+}
+
+.close:hover {
+  opacity: 0.8;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+.button:hover {
+  opacity: 0.8;
+}
+
+/* Estilo para o footer */
+footer {
+  background-color: var(--primary-color);
+  text-align: center;
+  padding: 20px 40px;
+  color: #fff;
+  font-size: 0.8rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.containerLogoFooter {
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.logoFooter {
+  height: 80px;
+}
+
+.contact-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.contact-info {
+  text-align: right;
+}
+
+.contact-info h2 {
+  margin-bottom: 10px;
+}
+
+.email-link {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.email-link:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+/* Estilo dos ícones de redes sociais */
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.social-links a {
+  max-width: 45%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.social-icon {
+  font-size: 14px;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--tertiary-color);
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: var(--secondary-color);
+  text-decoration: none !important;
+}
+
+.social-icon i {
+  font-size: 2rem;
+}
+
+/* Estilo para a barra de rolagem */
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Layout para diferentes tamanhos de tela */
+@media screen and (max-width: 900px) {
+  .profile-photo-container {
+    float: left;
+    margin-right: 20px;
+  }
+
+  .apresentacao-container {
+    display: block;
+  }
+
+  .separator {
+    flex-direction: column-reverse;
+  }
+
+  #contact {
+    justify-content: space-between;
+  }
+
+  .project-button {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    width: 100%;
+    border-radius: 0;
+    min-height: 100vh;
+  }
+
+  .project-button {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  .logoFooter {
+    height: 60px;
+  }
+
+  .contact-footer {
+    gap: 10px;
+  }
+
+  .social-links {
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .social-icon {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .profile-photo-container{
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+  }
+
+  #contact {
+    flex-direction: column;
+  }
+
+  .social-icon.linkedin {
+    justify-content: flex-end;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  #menu {
+    position: fixed;
+    top: 0;
+    padding: 80px 10px 10px;
+    right: -150px;
+    width: 150px;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 4px !important;
+  }
+
+  #menu.active {
+    right: 0;
+  }
+
+  #menu a {
+    padding: 10px;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    margin: 0 !important;
+  }
+
+  #menu a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color) !important;
+    text-decoration: none !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  footer {
+    padding: 20px;
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+
+  footer p {
+    width: 100%;
+  }
+
+  .containerLogoFooter {
+    justify-content: space-between;
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .social-links {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .social-icon {
+    width: auto;
+  }
+}
