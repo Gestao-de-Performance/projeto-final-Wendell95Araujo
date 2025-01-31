@@ -40,7 +40,7 @@ function openModal(project, gitHubLink = true) {
       description: "Jogo de plataforma (jump 'n' run)",
       image: "img/projects/dino.webp",
       github: "https://github.com/wendell95araujo/dinogame.io",
-      online: "games/dino-dancer-game",
+      online: "https://wendell-araujo.vercel.app/games/dino-dancer-game",
     },
     velha: {
       title: "GAME - JOGO DA VELHA",
@@ -62,7 +62,7 @@ function openModal(project, gitHubLink = true) {
       description: "Jogo da forca",
       image: "img/projects/forca.webp",
       github: "https://github.com/Wendell95Araujo/jogo-da-forca",
-      online: "games/jogo-da-forca",
+      online: "https://wendell-araujo.vercel.app/games/jogo-da-forca",
     },
 
     faculdade: {
